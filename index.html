@@ -17,6 +17,7 @@
     <div id="servers">
         <div class="server" id="server1">Server 1: <span>Checking...</span></div>
         <div class="server" id="server2">Server 2: <span>Checking...</span></div>
+        <div class="server" id="status-server">Server 2: <span>Checking...</span></div>
     </div>
 
     <script>
@@ -34,10 +35,11 @@
         function updateStatus() {
             checkServer("server1", "https://server1.example.com");
             checkServer("server2", "https://server2.example.com");
+            checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/");
         }
 
         updateStatus();
-        setInterval(updateStatus, 5000); // Check every 5 seconds
+        setInterval(updateStatus, 5000); 
     </script>
 
 </body>
