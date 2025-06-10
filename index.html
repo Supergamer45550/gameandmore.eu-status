@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .server { margin: 20px; padding: 10px; border: 1px solid #ddd; display: inline-block; }
+        .online { color: green; }
+        .offline { color: red; }
+    </style>
+</head>
+<body>
+
+    <h1>Server Status</h1>
+    <div id="servers">
+        <div class="server" id="server1">Server 1: <span>Checking...</span></div>
+        <div class="server" id="server2">Server 2: <span>Checking...</span></div>
+    </div>
+
+    <script>
+        async function checkServer(serverId, url) {
+            try {
+                const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
+                document.querySelector(`#${serverId} span`).textContent = "Online";
+                document.querySelector(`#${serverId}`).classList.add("online");
+            } catch (error) {
+                document.querySelector(`#${serverId} span`).textContent = "Offline";
+                document.querySelector(`#${serverId}`).classList.add("offline");
+            }
+        }
+
+        function updateStatus() {
+            checkServer("server1", "https://server1.example.com");
+            checkServer("server2", "https://server2.example.com");
+        }
+
+        updateStatus();
+        setInterval(updateStatus, 5000); // Check every 5 seconds
+    </script>
+
+</body>
+</html>
