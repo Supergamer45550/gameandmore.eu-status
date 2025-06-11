@@ -13,8 +13,10 @@ async function checkServer(serverId, url) {
 
 function updateStatus() {
 checkServer("server1", "https://dev.gameandmore.eu/");
-checkServer("server2", "https://server2.example.com");
-checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/"); 
+checkServer("server2", "https:/forum.gameandmore.eu");
+checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/");
+checkServer("essentials-seite", "https://supergamer45550.github.io/gameandmore.eu-fallback/")
+checkServer("placeholder", "example.example.com")
 }
 
 
