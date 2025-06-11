@@ -13,7 +13,7 @@ async function checkServer(serverId, url) {
 
 function updateStatus() {
 checkServer("server1", "https://dev.gameandmore.eu/");
-checkServer("server2", "https:/forum.gameandmore.eu");
+checkServer("server2", "https:/example.example.com");
 checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/");
 }
 
