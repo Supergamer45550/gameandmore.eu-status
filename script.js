@@ -15,8 +15,6 @@ function updateStatus() {
 checkServer("server1", "https://dev.gameandmore.eu/");
 checkServer("server2", "https:/forum.gameandmore.eu");
 checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/");
-checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/");
-checkServer("placeholder", "example.example.com")
 }
 
 
