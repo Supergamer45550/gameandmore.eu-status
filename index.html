@@ -1,15 +1,13 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Server Status</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .server { margin: 20px; padding: 10px; border: 1px solid #ddd; display: inline-block; }
-        .online { color: green; }
-        .offline { color: red; }
-    </style>
 </head>
 <body>
 
@@ -21,28 +19,7 @@
         <div class="server" id="status-server">Status-server: <span>Checking...</span></div>
     </div>
 
-    <script>
-        async function checkServer(serverId, url) {
-            try {
-                const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
-                document.querySelector(`#${serverId} span`).textContent = "Online";
-                document.querySelector(`#${serverId}`).classList.add("online");
-            } catch (error) {
-                document.querySelector(`#${serverId} span`).textContent = "Offline";
-                document.querySelector(`#${serverId}`).classList.add("offline");
-            }
-        }
 
-        function updateStatus() {
-    checkServer("server1", "https://dev.gameandmore.eu/");
-    checkServer("server2", "https://server2.example.com");
-    checkServer("status-server", "https://supergamer45550.github.io/gameandmore.eu-status/"); 
-}
-
-
-        updateStatus();
-        setInterval(updateStatus, 5000); 
-    </script>
 
 </body>
 </html>

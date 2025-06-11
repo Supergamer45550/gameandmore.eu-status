@@ -1,0 +1,13 @@
+body { font-family: Arial, sans-serif; 
+    text-align: center; }
+
+    .server { margin: 20px; 
+        padding: 10px; 
+        border: 1px solid #ddd; 
+        display: inline-block; }
+
+        .online { 
+    color: green; }
+
+    .offline { 
+        color: red; }
